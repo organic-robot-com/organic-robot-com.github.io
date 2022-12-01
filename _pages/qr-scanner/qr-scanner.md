@@ -4,6 +4,8 @@ title: "QR Scanner"
 permalink: /qr-scanner/
 ---
 
+QR Scanner is currently in beta testing but will be available through the Play Store soon.
+
 QR Scanner is simply a QR scanning app for Android. It was created to offer a full
 featured QR scanner app that requires the absolute minimum required device permissions.
 Below is a summary of the implemented features along with the version in which they
@@ -53,3 +55,7 @@ if they want to join the network.
 Prior to Android version 10, an application can add a WiFi network and attach to it.
 For users whose device runs Android 9 or lower, the application will automatically
 attach to the network - after they have pressed the "Connect" button.
+
+# Privacy Policy
+
+See QR Scanner's [privacy policy](/qr-scanner/privacy-policy).
