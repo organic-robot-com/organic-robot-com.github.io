@@ -4,8 +4,10 @@ title: "QR Scanner"
 permalink: /qr-scanner/
 ---
 
-QR Scanner is currently in beta testing but will be available through the Play Store soon.
 
+[![Google Play Store](/assets/images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.organic_robot.qrscanner)
+
+QR Scanner can be downloaded from the [Google Play Store](https://play.google.com/store/apps/details?id=com.organic_robot.qrscanner).
 QR Scanner is simply a QR scanning app for Android. It was created to offer a full
 featured QR scanner app that requires the absolute minimum required device permissions.
 Below is a summary of the implemented features along with the version in which they
@@ -15,21 +17,21 @@ were added.
 
 | Feature | Implemented | Added In Version |
 |:-------:|:-----------:|:----------------:|
-| QR Scanning | &#10003; | v0.1.0 |
+| QR Scanning | &#10003; | v1.0.0 |
 
 ## Supported QR Code Types
 
 | QR Code Type | Supported | Added In Version |
 |:------------:|:---------:|:----------------:|
-| URL Bookmark | &#10003; | v0.1.0 |
-| WiFi | &#10003; | v0.1.0 |
+| URL Bookmark | &#10003; | v1.0.0 |
+| WiFi | &#10003; | v1.0.0 |
+| GeoPoint | &#10003; | v1.0.0 |
 | Address | &#10007; | |
 | Calendar Date/Time | &#10007; | |
 | Calendar Event | &#10007; | |
 | Contact Info | &#10007; | |
 | Driver License | &#10007; | |
 | Email | &#10007; | |
-| GeoPoint | &#10007; | |
 | Person Name | &#10007; | |
 | Phone Number | &#10007; | |
 | SMS | &#10007; | |
