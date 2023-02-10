@@ -15,9 +15,12 @@ were added.
 
 # Application Features
 
+The latest version of the application is v1.1.0.
+
 | Feature | Implemented | Added In Version |
 |:-------:|:-----------:|:----------------:|
 | QR Scanning | &#10003; | v1.0.0 |
+| Bounding Box displayed on Detected QR Code | &#10003; | v1.1.0 |
 
 ## Supported QR Code Types
 
