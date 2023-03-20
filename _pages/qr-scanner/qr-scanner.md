@@ -15,7 +15,7 @@ were added.
 
 # Application Features
 
-The latest version of the application is v1.1.0.
+The latest version of the application is v1.2.0.
 
 | Feature | Implemented | Added In Version |
 |:-------:|:-----------:|:----------------:|
