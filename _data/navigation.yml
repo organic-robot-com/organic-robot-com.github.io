@@ -1,3 +1,5 @@
 main:
   - title: QR Scanner
     url: /qr-scanner/
+  - title: Homelab
+    url: /homelab/
