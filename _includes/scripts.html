@@ -1,0 +1,84 @@
+<style>
+    #cookie-notice {
+      padding: 0.5rem 1rem;
+      display: none;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: calc(100% - 2rem);
+      background: #222;
+      color: rgba(255,255,255,0.8);
+    }
+    #cookie-notice a {
+      display: inline-block;
+      cursor: pointer;
+      margin-left: 0.5rem;
+      margin-top: 15px;
+      border: 1px solid white;
+    }
+    @media (max-width: 767px) {
+        #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 1rem;}
+        #cookie-notice a {position: relative; bottom: 4px;}
+    }
+</style>
+<div id="cookie-notice">
+  <span>
+    This website uses third-party cookies to understand site usage. This information allows me to identify the topics that readers find most interesting.
+  </span>
+  <br/>
+  <a id="cookie-notice-accept" class="btn btn-primary btn-sm">Accept All</a>
+  <a id="cookie-notice-strictly-necessary" class="btn btn-primary btn-sm">Required Only</a>
+</div>
+
+<script>
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
+
+    // display the cookie notice
+    c = readCookie("analytics-cookies-accepted")
+
+    // if the analytics-cookies-accepted cookie hasn't been set show the notice
+    if (c == null) {
+
+      // analytics-cookies-accepted hasn't been set so show the notice
+      document.getElementById('cookie-notice').style.display = 'block';
+
+      // add an event listener to clicked
+      document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+          createCookie('analytics-cookies-accepted','true',365);
+          document.getElementById('cookie-notice').style.display = 'none';
+          location.reload();
+      });
+      document.getElementById('cookie-notice-strictly-necessary').addEventListener("click", function() {
+          createCookie('analytics-cookies-accepted','false',31);
+          document.getElementById('cookie-notice').style.display = 'none';
+          location.reload();
+      })
+    }
+
+    // if the analytics-cookies-accepted has a value of true call the gtagWrapper
+    if (c == 'true') {
+      gtagWrapper();
+    } 
+
+</script>
